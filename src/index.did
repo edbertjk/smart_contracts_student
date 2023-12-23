@@ -1,0 +1,11 @@
+service: () -> {
+    addCourseStudent: (text, text) -> (variant {Ok:record {nameStudent:text; createdAt:nat64; idStudent:text; alreadyPay:bool; paymentStudent:nat64; semesterCreditSemesterTotal:nat64; updatedAt:nat64; semesterStudent:text; courseStudent:vec record {semesterCreditSemester:nat64; createdAt:nat64; nameCourse:text; updatedAt:nat64; idCourse:text}}; Err:text});
+    createCourse: (text, nat64) -> (variant {Ok:record {semesterCreditSemester:nat64; createdAt:nat64; nameCourse:text; updatedAt:nat64; idCourse:text}; Err:text});
+    createSemester: (text, nat64) -> (variant {Ok:record {semesterCreditSemester:nat64; idSemester:text; createdAt:nat64; updatedAt:nat64}; Err:text});
+    createStudent: (text, text) -> (variant {Ok:record {nameStudent:text; createdAt:nat64; idStudent:text; alreadyPay:bool; paymentStudent:nat64; semesterCreditSemesterTotal:nat64; updatedAt:nat64; semesterStudent:text; courseStudent:vec record {semesterCreditSemester:nat64; createdAt:nat64; nameCourse:text; updatedAt:nat64; idCourse:text}}; Err:text});
+    getAllCourse: () -> (vec record {semesterCreditSemester:nat64; createdAt:nat64; nameCourse:text; updatedAt:nat64; idCourse:text}) query;
+    getAllSemester: () -> (vec record {semesterCreditSemester:nat64; idSemester:text; createdAt:nat64; updatedAt:nat64}) query;
+    getAllStudent: () -> (vec record {nameStudent:text; createdAt:nat64; idStudent:text; alreadyPay:bool; paymentStudent:nat64; semesterCreditSemesterTotal:nat64; updatedAt:nat64; semesterStudent:text; courseStudent:vec record {semesterCreditSemester:nat64; createdAt:nat64; nameCourse:text; updatedAt:nat64; idCourse:text}}) query;
+    getOnceStudent: (text) -> (record {nameStudent:text; createdAt:nat64; idStudent:text; alreadyPay:bool; paymentStudent:nat64; semesterCreditSemesterTotal:nat64; updatedAt:nat64; semesterStudent:text; courseStudent:vec record {semesterCreditSemester:nat64; createdAt:nat64; nameCourse:text; updatedAt:nat64; idCourse:text}}) query;
+    payment: (text, nat64) -> (variant {Ok:record {nameStudent:text; createdAt:nat64; idStudent:text; alreadyPay:bool; paymentStudent:nat64; semesterCreditSemesterTotal:nat64; updatedAt:nat64; semesterStudent:text; courseStudent:vec record {semesterCreditSemester:nat64; createdAt:nat64; nameCourse:text; updatedAt:nat64; idCourse:text}}; Err:text});
+}
